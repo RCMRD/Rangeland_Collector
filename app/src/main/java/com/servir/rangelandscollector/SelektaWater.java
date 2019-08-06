@@ -4,15 +4,13 @@ package com.servir.rangelandscollector;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import com.servir.rangelandscollector.former.Colecta;
 
 public class SelektaWater extends AppCompatActivity {
 

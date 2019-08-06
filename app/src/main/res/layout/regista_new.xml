@@ -79,7 +79,7 @@
             android:orientation="vertical"
             android:layout_height="wrap_content">
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textIL1"
             android:layout_alignParentLeft="true"
             android:layout_width="match_parent"
@@ -98,10 +98,10 @@
                 android:textColor="@color/colorWhiteText"
                 android:ems="10"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textIL2"
             android:layout_alignLeft="@+id/textIL1"
             android:layout_below="@+id/textIL1"
@@ -124,9 +124,9 @@
                 android:hint="@string/fono"
                 android:ems="10"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textIL3"
             android:layout_alignLeft="@+id/textIL2"
             android:layout_below="@+id/textIL2"
@@ -148,10 +148,10 @@
                 android:hint="@string/emailad"
                 android:ems="10"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textIL4"
             android:layout_alignLeft="@+id/textIL3"
             android:layout_below="@+id/textIL3"
@@ -173,7 +173,7 @@
                 android:hint="@string/orgaa"
                 android:ems="10"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <!--<android.support.design.widget.TextInputLayout
@@ -200,7 +200,7 @@ android:textColor="@color/colorWhiteText"
                 />
         </android.support.design.widget.TextInputLayout>-->
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textIL6"
             android:layout_alignLeft="@+id/textIL4"
             android:layout_below="@+id/textIL4"
@@ -222,9 +222,9 @@ android:textColor="@color/colorWhiteText"
                 android:hint="password"
                 android:ems="10"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textIL7"
             android:layout_alignLeft="@+id/textIL6"
             android:layout_below="@+id/textIL6"
@@ -246,7 +246,7 @@ android:textColor="@color/colorWhiteText"
                 android:hint="Confirm Password"
                 android:ems="10"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"

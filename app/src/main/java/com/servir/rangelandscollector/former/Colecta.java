@@ -1,7 +1,7 @@
 package com.servir.rangelandscollector.former;
 
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Colecta extends AppCompatActivity {
 	
