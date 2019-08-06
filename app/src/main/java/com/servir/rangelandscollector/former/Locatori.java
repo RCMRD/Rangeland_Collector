@@ -22,8 +22,8 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import com.servir.rangelandscollector.Utils.ApplicationContextor;
-import com.servir.rangelandscollector.Utils.Constantori;
+import com.servir.rangelandscollector.utils.ApplicationContextor;
+import com.servir.rangelandscollector.utils.Constantori;
 
 import static android.app.Activity.RESULT_CANCELED;
 import static android.app.Activity.RESULT_OK;

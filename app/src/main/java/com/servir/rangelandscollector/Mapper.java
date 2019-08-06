@@ -17,7 +17,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
-import com.servir.rangelandscollector.Utils.Constantori;
+import com.servir.rangelandscollector.utils.Constantori;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

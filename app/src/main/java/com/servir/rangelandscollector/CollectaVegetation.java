@@ -32,16 +32,14 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.servir.rangelandscollector.Utils.Constantori;
-import com.servir.rangelandscollector.Utils.DatabaseHandler;
+import com.servir.rangelandscollector.utils.Constantori;
+import com.servir.rangelandscollector.utils.DatabaseHandler;
 
 public class CollectaVegetation extends AppCompatActivity {
 

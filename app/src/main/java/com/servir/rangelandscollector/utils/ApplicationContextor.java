@@ -1,4 +1,4 @@
-package com.servir.rangelandscollector.Utils;
+package com.servir.rangelandscollector.utils;
 
 import android.app.Application;
 import android.content.Context;

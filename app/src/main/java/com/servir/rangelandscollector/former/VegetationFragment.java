@@ -34,9 +34,8 @@ import android.widget.Toast;
 import com.inthecheesefactory.thecheeselibrary.fragment.support.v4.app.NestedActivityResultFragment;
 import com.servir.rangelandscollector.MainActivity;
 import com.servir.rangelandscollector.R;
-import com.servir.rangelandscollector.Utils.Constantori;
-import com.servir.rangelandscollector.Utils.DatabaseHandler;
-import com.servir.rangelandscollector.former.Selekta;
+import com.servir.rangelandscollector.utils.Constantori;
+import com.servir.rangelandscollector.utils.DatabaseHandler;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -25,10 +25,10 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import com.servir.rangelandscollector.Utils.AsyncTaskCompleteListener;
-import com.servir.rangelandscollector.Utils.Constantori;
-import com.servir.rangelandscollector.Utils.DatabaseHandler;
-import com.servir.rangelandscollector.Utils.NetPost;
+import com.servir.rangelandscollector.utils.AsyncTaskCompleteListener;
+import com.servir.rangelandscollector.utils.Constantori;
+import com.servir.rangelandscollector.utils.DatabaseHandler;
+import com.servir.rangelandscollector.utils.NetPost;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -39,7 +39,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
@@ -289,87 +288,85 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     diambaidweni(View);
                 }else{
 
-                    int hexa = 0;
+					if (Constantori.isConnectedToInternet()) {
+				
+								int hexa = 0;
 
 
-                    if (db.getRowCount(Constantori.TABLE_DAT_VEG,Constantori.KEY_DATSTATUS,Constantori.SAVE_DATSTATUS) > 0) {
+								if (db.getRowCount(Constantori.TABLE_DAT_VEG,Constantori.KEY_DATSTATUS,Constantori.SAVE_DATSTATUS) > 0) {
 
-                        JSONArray sendo = db.PostDataArray_Alldata(Constantori.TABLE_DAT_VEG, Constantori.KEY_DATSTATUS, Constantori.SAVE_DATSTATUS);
+									JSONArray sendo = db.PostDataArray_Alldata(Constantori.TABLE_DAT_VEG, Constantori.KEY_DATSTATUS, Constantori.SAVE_DATSTATUS);
 
-                        if (Constantori.isConnectedToInternet()) {
-                            new NetPost(context, "maindataVEG_PostJSON", sendo, "Sending... Make sure internet connection is active", Constantori.TABLE_DAT_VEG, Constantori.KEY_DATSTATUS, MainActivity.this).execute(new String[]{Constantori.URL_GEN});
-                        }else{
-                            Toast.makeText(context,Constantori.ERROR_NO_INTERNET,Toast.LENGTH_LONG).show();
-                        }
+									if (Constantori.isConnectedToInternet()) {
+										new NetPost(context, "maindataVEG_PostJSON", sendo, "Sending... Make sure internet connection is active", Constantori.TABLE_DAT_VEG, Constantori.KEY_DATSTATUS, MainActivity.this).execute(new String[]{Constantori.URL_GEN});
+									}
 
-                    }else{
-                        hexa++;
-                    }
+								}else{
+									hexa++;
+								}
 
-                    if (db.getRowCount(Constantori.TABLE_DAT_INV,Constantori.KEY_DATSTATUS,Constantori.SAVE_DATSTATUS) > 0) {
+								if (db.getRowCount(Constantori.TABLE_DAT_INV,Constantori.KEY_DATSTATUS,Constantori.SAVE_DATSTATUS) > 0) {
 
-                        JSONArray sendo = db.PostDataArray_Alldata(Constantori.TABLE_DAT_INV, Constantori.KEY_DATSTATUS, Constantori.SAVE_DATSTATUS);
+									JSONArray sendo = db.PostDataArray_Alldata(Constantori.TABLE_DAT_INV, Constantori.KEY_DATSTATUS, Constantori.SAVE_DATSTATUS);
 
-                        if (Constantori.isConnectedToInternet()) {
-                            new NetPost(context, "maindataINV_PostJSON", sendo, "Sending... Make sure internet connection is active", Constantori.TABLE_DAT_INV, Constantori.KEY_DATSTATUS, MainActivity.this).execute(new String[]{Constantori.URL_GEN});
-                        }else{
-                            Toast.makeText(context,Constantori.ERROR_NO_INTERNET,Toast.LENGTH_LONG).show();
-                        }
+									if (Constantori.isConnectedToInternet()) {
+										new NetPost(context, "maindataINV_PostJSON", sendo, "Sending... Make sure internet connection is active", Constantori.TABLE_DAT_INV, Constantori.KEY_DATSTATUS, MainActivity.this).execute(new String[]{Constantori.URL_GEN});
+									}
 
-                    }else{
-                        hexa++;
-                    }
+								}else{
+									hexa++;
+								}
 
-                    if (db.getRowCount(Constantori.TABLE_DAT_WAT,Constantori.KEY_DATSTATUS,Constantori.SAVE_DATSTATUS) > 0) {
+								if (db.getRowCount(Constantori.TABLE_DAT_WAT,Constantori.KEY_DATSTATUS,Constantori.SAVE_DATSTATUS) > 0) {
 
-                        JSONArray sendo = db.PostDataArray_Alldata(Constantori.TABLE_DAT_WAT, Constantori.KEY_DATSTATUS, Constantori.SAVE_DATSTATUS);
+									JSONArray sendo = db.PostDataArray_Alldata(Constantori.TABLE_DAT_WAT, Constantori.KEY_DATSTATUS, Constantori.SAVE_DATSTATUS);
 
-                        if (Constantori.isConnectedToInternet()) {
-                            new NetPost(context, "maindataWAT_PostJSON", sendo, "Sending... Make sure internet connection is active", Constantori.TABLE_DAT_WAT, Constantori.KEY_DATSTATUS, MainActivity.this).execute(new String[]{Constantori.URL_GEN});
-                        }else{
-                            Toast.makeText(context,Constantori.ERROR_NO_INTERNET,Toast.LENGTH_LONG).show();
-                        }
+									if (Constantori.isConnectedToInternet()) {
+										new NetPost(context, "maindataWAT_PostJSON", sendo, "Sending... Make sure internet connection is active", Constantori.TABLE_DAT_WAT, Constantori.KEY_DATSTATUS, MainActivity.this).execute(new String[]{Constantori.URL_GEN});
+									}
 
-                    }else{
-                        hexa++;
-                    }
+								}else{
+									hexa++;
+								}
 
 
-                    if(db.getRowCount(Constantori.TABLE_PIC, "","") > 0){
+								if(db.getRowCount(Constantori.TABLE_PIC, "","") > 0){
 
-                        SimpleDateFormat dateFormat = new SimpleDateFormat("HHmmss", java.util.Locale.getDefault());
-                        zipfilo = "RLC_"  +  refo + "_" + dateFormat.format(new Date()) + ".zip";
-                        lapica();
+									SimpleDateFormat dateFormat = new SimpleDateFormat("HHmmss", java.util.Locale.getDefault());
+									zipfilo = "RLC_"  +  refo + "_" + dateFormat.format(new Date()) + ".zip";
+									lapica();
 
-                        try {
+									try {
 
-                            JSONArray picArray = new JSONArray();
-                            JSONObject allImages = new JSONObject();
+										JSONArray picArray = new JSONArray();
+										JSONObject allImages = new JSONObject();
 
-                            allImages.put("zipfile", lefile);
-                            allImages.put("zipname", zipfilo);
+										allImages.put("zipfile", lefile);
+										allImages.put("zipname", zipfilo);
 
-                            picArray.put(allImages);
+										picArray.put(allImages);
 
-                            if (Constantori.isConnectedToInternet()) {
-                                new NetPost(context, "maindata_PostImages", picArray, "Sending Images... Make sure internet connection is active", Constantori.TABLE_PIC, "", MainActivity.this).execute(new String[]{Constantori.URL_GEN});
-                            }else{
+										if (Constantori.isConnectedToInternet()) {
+											new NetPost(context, "maindata_PostImages", picArray, "Sending Images... Make sure internet connection is active", Constantori.TABLE_PIC, "", MainActivity.this).execute(new String[]{Constantori.URL_GEN});
+										}
+
+									}catch (Exception xx){
+
+
+									}
+
+								}else{
+
+									hexa++;
+								}
+
+								if (hexa > 0){
+									Toast.makeText(getBaseContext(), "No pending data in internal database", Toast.LENGTH_LONG).show();
+								}
+					
+					}else{
                                 Toast.makeText(context,Constantori.ERROR_NO_INTERNET,Toast.LENGTH_LONG).show();
-                            }
-
-                        }catch (Exception xx){
-
-
-                        }
-
-                    }else{
-
-                        hexa++;
-                    }
-
-                    if (hexa > 0){
-                        Toast.makeText(getBaseContext(), "No pending data in internal database", Toast.LENGTH_LONG).show();
-                    }
+                         }
 
 
                 }

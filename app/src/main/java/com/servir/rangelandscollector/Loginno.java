@@ -29,11 +29,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
-import com.servir.rangelandscollector.Utils.ApplicationContextor;
-import com.servir.rangelandscollector.Utils.AsyncTaskCompleteListener;
-import com.servir.rangelandscollector.Utils.Constantori;
-import com.servir.rangelandscollector.Utils.DatabaseHandler;
-import com.servir.rangelandscollector.Utils.NetPost;
+import com.servir.rangelandscollector.utils.ApplicationContextor;
+import com.servir.rangelandscollector.utils.AsyncTaskCompleteListener;
+import com.servir.rangelandscollector.utils.Constantori;
+import com.servir.rangelandscollector.utils.DatabaseHandler;
+import com.servir.rangelandscollector.utils.NetPost;
 
 import org.json.JSONArray;
 
@@ -45,9 +45,9 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static com.servir.rangelandscollector.Utils.Constantori.allPermissionsGranted;
-import static com.servir.rangelandscollector.Utils.Constantori.displayLocationSettingsRequest;
-import static com.servir.rangelandscollector.Utils.Constantori.isgpsa;
+import static com.servir.rangelandscollector.utils.Constantori.allPermissionsGranted;
+import static com.servir.rangelandscollector.utils.Constantori.displayLocationSettingsRequest;
+import static com.servir.rangelandscollector.utils.Constantori.isgpsa;
 
 
 public class Loginno extends AppCompatActivity implements AsyncTaskCompleteListener {

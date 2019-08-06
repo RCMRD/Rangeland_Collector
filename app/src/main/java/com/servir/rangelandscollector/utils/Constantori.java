@@ -1,4 +1,4 @@
-package com.servir.rangelandscollector.Utils;
+package com.servir.rangelandscollector.utils;
 
 
 import android.app.Activity;
@@ -26,7 +26,6 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
-import com.servir.rangelandscollector.Loginno;
 import com.servir.rangelandscollector.R;
 
 import org.json.JSONArray;

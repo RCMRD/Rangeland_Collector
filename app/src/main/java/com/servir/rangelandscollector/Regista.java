@@ -21,10 +21,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.servir.rangelandscollector.Utils.AsyncTaskCompleteListener;
-import com.servir.rangelandscollector.Utils.Constantori;
-import com.servir.rangelandscollector.Utils.DatabaseHandler;
-import com.servir.rangelandscollector.Utils.NetPost;
+import com.servir.rangelandscollector.utils.AsyncTaskCompleteListener;
+import com.servir.rangelandscollector.utils.Constantori;
+import com.servir.rangelandscollector.utils.DatabaseHandler;
+import com.servir.rangelandscollector.utils.NetPost;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.servir.rangelandscollector.Utils;
+package com.servir.rangelandscollector.utils;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.widget.Toast;
 
 import com.servir.rangelandscollector.MainActivity;
-import com.servir.rangelandscollector.Utils.ServiceManager;
 
 /**
  * Created by Steve on 2/24/2017.
