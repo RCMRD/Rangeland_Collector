@@ -1,8 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/tools"
-    tools:context="com.servir.invasivespecies.MainActivity"
-    >
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	tools:context="com.servir.invasivespecies.MainActivity">
 
     <item  android:id="@+id/itop1"
 	    android:orderInCategory="1"
